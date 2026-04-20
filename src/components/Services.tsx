@@ -85,17 +85,6 @@ export const Services = () => {
                   {s.desc}
                 </p>
 
-                <a
-                  href="#donate"
-                  className={`mt-5 inline-flex items-center gap-1 text-sm font-semibold transition-smooth group-hover:gap-2 ${
-                    isAccent
-                      ? "text-[#F4EEE8]"
-                      : "text-[#8B5E3C]"
-                  }`}
-                >
-                  Donate Now <span>→</span>
-                </a>
-
                 <HeartDoodle className="absolute -bottom-4 -right-4 h-24 w-24 opacity-10 transition-smooth group-hover:rotate-12 group-hover:opacity-20" />
               </motion.article>
             );
