@@ -5,21 +5,18 @@ import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
 import g5 from "@/assets/gallery-5.jpg";
 import g6 from "@/assets/gallery-6.jpg";
-import g7 from "@/assets/gallery-7.jpg";
-import g8 from "@/assets/gallery-8.jpg";
 import { LeafDoodle, SparkleDoodle } from "./Doodles";
+import { Eyebrow } from "./Eyebrow";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const photos = [
-  { src: g1, label: "Food Distribution", span: "md:col-span-2 md:row-span-2" },
-  { src: g2, label: "Clean Water" },
-  { src: g3, label: "Medical Care" },
-  { src: g4, label: "Eco Hope", span: "md:row-span-2" },
-  { src: g5, label: "Education" },
-  { src: g6, label: "Volunteers", span: "md:col-span-2" },
-  { src: g7, label: "Elderly Support" },
-  { src: g8, label: "Bright Futures" },
+  { src: g1, label: "Iftar @ Uganda" },
+  { src: g2, label: "Iftar @ Gambia" },
+  { src: g3, label: "Food Distribution" },
+  { src: g4, label: "Community Iftar" },
+  { src: g5, label: "Aid for Children" },
+  { src: g6, label: "Ramadhan Blessings" },
 ];
 
 export const Gallery = () => {
@@ -37,7 +34,7 @@ export const Gallery = () => {
           className="mb-14 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end"
         >
           <div>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">— Gallery</p>
+            <Eyebrow label="Gallery" className="mb-3" />
             <h2 className="font-display text-3xl font-bold leading-tight text-primary sm:text-4xl md:text-5xl">
               Moments of Kindness <br /> Captured Together
             </h2>
@@ -47,7 +44,7 @@ export const Gallery = () => {
           </p>
         </motion.div>
 
-        <div className="grid auto-rows-[280px] grid-cols-1 gap-5 sm:grid-cols-2 md:auto-rows-[340px] md:grid-cols-4 md:gap-6">
+        <div className="grid auto-rows-[320px] grid-cols-1 gap-6 sm:grid-cols-2 md:auto-rows-[360px] md:grid-cols-3">
           {photos.map((p, i) => (
             <motion.figure
               key={p.label}
@@ -55,7 +52,7 @@ export const Gallery = () => {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ delay: i * 0.08, duration: 0.6, ease }}
-              className={`group relative overflow-hidden rounded-3xl shadow-soft transition-smooth hover:shadow-lift ${p.span ?? ""}`}
+              className="group relative overflow-hidden rounded-3xl shadow-soft transition-smooth hover:shadow-lift"
             >
               <img
                 src={p.src}

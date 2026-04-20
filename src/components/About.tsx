@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import aboutImg from "@/assets/about-child.jpg";
 import { JarDoodle, SparkleDoodle } from "./Doodles";
+import { Eyebrow } from "./Eyebrow";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -48,7 +49,7 @@ export const About = () => {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.9, ease }}
         >
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">— About Us</p>
+          <Eyebrow label="About Us" className="mb-3" />
           <h2 className="mb-5 font-display text-3xl font-bold leading-tight text-primary sm:text-4xl md:text-5xl">
             Committed to Compassion <br /> and Community
           </h2>
