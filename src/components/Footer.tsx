@@ -14,12 +14,12 @@ const WhatsAppIcon = ({ className = "h-4 w-4" }) => (
 
 const cols = [
   {
-    title: "Our Work",
-    links: ["Causes", "Projects", "Volunteers", "Events"]
+    title: "Our Focus Area",
+    links: ["Quranic Projects", "Khatamul Quran", "Waqaf Projects", "Madrasah and Masjid Developments"]
   },
   {
     title: "Our Story",
-    links: ["Uganda", "Gambia", "Gaza", "Khatam Al-Quran Mekkah"]
+    links: ["Iftar Uganda", "Iftar Gambia", "Iftar Gaza", "Khatam Al-Quran Mekkah"]
   }
 ];
 
@@ -115,7 +115,7 @@ export const Footer = () => {
           {/* Contact Column - lowered */}
           <div className="md:mt-12">
             <h4 className="mb-4 font-display text-base font-semibold text-[#6B4A34]">
-              Contact
+              Contact Us
             </h4>
 
             <ul className="space-y-2.5 text-sm text-[#6B4A34]/70">
@@ -126,6 +126,11 @@ export const Footer = () => {
                 >
                   inaayahsg@gmail.com
                 </a>
+              </li>
+
+              {/* Phone Numbers */}
+              <li>
+                +65 9062 0969 / +65 9242 6981
               </li>
 
               <li>Singapore</li>

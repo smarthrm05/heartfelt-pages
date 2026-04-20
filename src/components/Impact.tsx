@@ -97,7 +97,7 @@ export const Impact = () => {
             className="inline-flex items-center gap-2 rounded-full bg-[#8B5E3C] px-8 py-4 font-semibold text-white shadow-glow transition-smooth hover:scale-105 hover:bg-[#6B4A34]"
           >
             <WhatsAppIcon className="h-5 w-5" />
-            Contact via WhatsApp
+            Chat with Admin on WhatsApp
           </motion.a>
 
         </div>
