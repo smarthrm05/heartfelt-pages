@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { JarDoodle, HeartDoodle } from "./Doodles";
 
-const ease = [0.22, 1, 0.36, 1];
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export const Newsletter = () => {
   return (

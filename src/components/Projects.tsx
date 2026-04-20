@@ -9,7 +9,7 @@ const projects = [
   { img: campaign3, title: "Build Schools to Uplift Communities", desc: "This charity believes every child deserves a quality education." },
 ];
 
-const ease = [0.22, 1, 0.36, 1];
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export const Projects = () => {
   return (

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Counter } from "./Counter";
 import { HeartDoodle, SparkleDoodle } from "./Doodles";
 
-const ease = [0.22, 1, 0.36, 1];
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export const Impact = () => {
   return (

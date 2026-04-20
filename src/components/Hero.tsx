@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-children.jpg";
 import { HandDoodle, JarDoodle, SparkleDoodle, HeartDoodle } from "./Doodles";
 
-const ease = [0.22, 1, 0.36, 1];
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export const Hero = () => {
   return (

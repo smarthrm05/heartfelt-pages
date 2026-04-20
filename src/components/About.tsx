@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import aboutImg from "@/assets/about-child.jpg";
 import { JarDoodle, SparkleDoodle } from "./Doodles";
 
-const ease = [0.22, 1, 0.36, 1];
+const ease = [0.22, 1, 0.36, 1] as const;
 
 const tags = ["Charity for Foods", "Charity for Water", "Charity for Education", "Charity for Medical"];
 

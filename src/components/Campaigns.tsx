@@ -11,7 +11,7 @@ const campaigns = [
   { img: campaign3, title: "Build Schools to Uplift Communities", desc: "This charity believes every child deserves a quality education.", raised: 45034, goal: 100000, progress: 45 },
 ];
 
-const ease = [0.22, 1, 0.36, 1];
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export const Campaigns = () => {
   return (

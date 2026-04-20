@@ -11,7 +11,7 @@ const faqs = [
   { q: "How can I stay updated on your charity's activities?", a: "Subscribe to our newsletter, follow us on social media, or visit our blog for regular updates and stories." },
 ];
 
-const ease = [0.22, 1, 0.36, 1];
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export const FAQ = () => {
   return (
