@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { HeartDoodle } from "./Doodles";
+import { MessageCircle } from "lucide-react";
 
 const cols = [
   { title: "Our Work", links: ["Causes", "Projects", "Volunteers", "Events"] },
@@ -8,6 +9,12 @@ const cols = [
 ];
 
 export const Footer = () => {
+  // ✅ WhatsApp Config
+  const message = "Assalamualaikum, I would like to know more about Inaayah SG";
+
+  const wa1 = `https://wa.me/6590620969?text=${encodeURIComponent(message)}`;
+  const wa2 = `https://wa.me/6592426981?text=${encodeURIComponent(message)}`;
+
   return (
     <motion.footer
       initial={{ opacity: 0 }}
@@ -25,16 +32,36 @@ export const Footer = () => {
               </span>
               <span className="font-display text-xl font-bold">Raha</span>
             </a>
+
             <p className="mb-6 text-sm text-primary-foreground/70">
               Great brands connect with the support of small charities that create meaningful change in the communities they serve.
             </p>
-            <div className="flex gap-3">
-              <a href="#donate" className="rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-secondary-foreground transition-smooth hover:scale-105">
-                Donate Now
+
+            {/* ✅ 2 WhatsApp Buttons */}
+            <div className="flex flex-col gap-3">
+              
+              {/* WA 1 */}
+              <a
+                href={wa1}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-secondary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              >
+                <MessageCircle className="h-4 w-4" />
+                +65 9062 0969
               </a>
-              <a href="#contact" className="rounded-full border border-primary-foreground/30 px-5 py-2.5 text-sm font-semibold transition-smooth hover:bg-primary-foreground/10">
-                Contact us
+
+              {/* WA 2 */}
+              <a
+                href={wa2}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-full border border-secondary px-5 py-2.5 text-sm font-semibold text-secondary transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-secondary-foreground"
+              >
+                <MessageCircle className="h-4 w-4" />
+                +65 9242 6981
               </a>
+
             </div>
           </div>
 
@@ -44,7 +71,9 @@ export const Footer = () => {
               <ul className="space-y-2.5 text-sm text-primary-foreground/70">
                 {c.links.map((l) => (
                   <li key={l}>
-                    <a href="#" className="transition-colors hover:text-secondary">{l}</a>
+                    <a href="#" className="transition-colors hover:text-secondary">
+                      {l}
+                    </a>
                   </li>
                 ))}
               </ul>

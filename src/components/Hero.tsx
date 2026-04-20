@@ -76,7 +76,7 @@ export const Hero = () => {
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
           <a href="#donate" className="group rounded-full bg-secondary px-7 py-3.5 font-semibold text-secondary-foreground shadow-glow transition-smooth hover:scale-105 hover:bg-secondary/90">
-            Donate Now
+            Contact via Whatsapp
             <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
           </a>
           <a href="#about" className="rounded-full border border-primary-foreground/30 bg-primary-foreground/5 px-7 py-3.5 font-semibold text-primary-foreground backdrop-blur-md transition-smooth hover:scale-105 hover:bg-primary-foreground/15">

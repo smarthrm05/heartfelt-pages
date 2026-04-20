@@ -49,7 +49,7 @@ export const About = () => {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.9, ease }}
         >
-          <Eyebrow label="About Us" className="mb-3" />
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">— About Us</p>
           <h2 className="mb-5 font-display text-3xl font-bold leading-tight text-primary sm:text-4xl md:text-5xl">
             Committed to Compassion <br /> and Community
           </h2>
