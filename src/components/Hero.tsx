@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImg from "@/assets/bg_1.jpg";
+import heroImg from "@/assets/charity.png";
 import { HandDoodle, JarDoodle, SparkleDoodle, HeartDoodle } from "./Doodles";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -16,7 +16,7 @@ export const Hero = () => {
           height={1280}
           className="h-full w-full animate-hero-zoom object-cover"
         />
-        <div className="absolute inset-0 bg-[#6B4A34]/65" />
+        <div className="absolute inset-0 bg-[#0000]/65" />
       </div>
 
       {/* Floating decorative doodles */}
@@ -46,13 +46,6 @@ export const Hero = () => {
       </motion.div>
 
       <div className="container relative flex min-h-[100svh] flex-col items-center justify-center pt-32 text-center">
-        <motion.span
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.6, ease }}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm font-medium text-primary-foreground backdrop-blur-md"
-        >
-          <span className="h-2 w-2 rounded-full bg-secondary" />
-          Charity for a brighter tomorrow
-        </motion.span>
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.9, ease }}
@@ -60,7 +53,7 @@ export const Hero = () => {
         >
           Every Helping Hand,<br />
           <span className="relative inline-block">
-            Every <span className="font-script italic text-[#D9A07B]">Heartfelt</span> Change
+            Every <span className="font-script italic text-[#C9A961]">Heartfelt</span> Change
           </span>
         </motion.h1>
 
@@ -98,12 +91,6 @@ export const Hero = () => {
     </span>
   </a>
 
-  <a
-    href="#about"
-    className="rounded-full border border-primary-foreground/30 bg-primary-foreground/5 px-7 py-3.5 font-semibold text-primary-foreground backdrop-blur-md transition-smooth hover:scale-105 hover:bg-primary-foreground/15"
-  >
-    Watch Video
-  </a>
 </motion.div>
         <motion.div
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.6, duration: 1 }}
