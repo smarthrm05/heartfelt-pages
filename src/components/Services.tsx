@@ -18,9 +18,10 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export const Services = () => {
   return (
-    <section id="causes" className="relative overflow-hidden py-24 md:py-32">
-      <LeafDoodle className="pointer-events-none absolute -left-6 top-10 h-20 w-20 text-primary/15" />
-      <LeafDoodle className="pointer-events-none absolute right-6 bottom-10 h-16 w-16 -scale-x-100 text-primary/15" />
+   <section id="causes" className="relative overflow-hidden py-24 md:py-32 bg-[#FCFAF7]">
+
+      <LeafDoodle className="pointer-events-none absolute -left-6 top-10 h-20 w-20 text-[#8B5E3C]/20" />
+      <LeafDoodle className="pointer-events-none absolute right-6 bottom-10 h-16 w-16 -scale-x-100 text-[#8B5E3C]/20" />
 
       <div className="container">
         <motion.div
@@ -30,42 +31,71 @@ export const Services = () => {
           transition={{ duration: 0.7, ease }}
           className="mb-14 max-w-2xl"
         >
-          <Eyebrow label="Charity Services" className="mb-3" />
-          <h2 className="font-display text-3xl font-bold leading-tight text-primary sm:text-4xl md:text-5xl">
-            Compassionate Programs <br className="hidden md:block" />
-            <span className="text-primary-glow">Built on Faith and Care</span>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#8B5E3C]">
+            — Charity Services
+          </p>
+
+          <h2 className="font-display text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+            <span className="text-[#6B4A34]">
+              Compassionate Programs
+            </span>
+
+            <br className="hidden md:block" />
+
+            <span className="text-[#D9A07B]">
+              Built on Faith and Care
+            </span>
           </h2>
         </motion.div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => {
             const isAccent = i === 0 || i === 4 || i === 8;
+
             return (
               <motion.article
                 key={s.title}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
-                transition={{ delay: (i % 3) * 0.12, duration: 0.6, ease }}
+                transition={{
+                  delay: (i % 3) * 0.12,
+                  duration: 0.6,
+                  ease
+                }}
                 className={`group relative overflow-hidden rounded-3xl p-8 shadow-soft transition-smooth hover:-translate-y-2 hover:shadow-lift ${
-                  isAccent ? "bg-primary text-primary-foreground" : "bg-card text-foreground"
+                  isAccent
+                    ? "bg-[#8B5E3C] text-white"
+                    : "bg-white text-[#6B4A34]"
                 }`}
               >
-                <div className="mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-secondary text-2xl text-secondary-foreground transition-smooth group-hover:rotate-6 group-hover:scale-110">
+                <div className="mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-[#F8F1EB] text-2xl transition-smooth group-hover:rotate-6 group-hover:scale-110">
                   {s.icon}
                 </div>
-                <h3 className="mb-3 font-display text-xl font-semibold">{s.title}</h3>
-                <p className={`text-sm leading-relaxed ${isAccent ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
+
+                <h3 className="mb-3 font-display text-xl font-semibold">
+                  {s.title}
+                </h3>
+
+                <p className={`text-sm leading-relaxed ${
+                  isAccent
+                    ? "text-white/80"
+                    : "text-[#6B4A34]/80"
+                }`}>
                   {s.desc}
                 </p>
+
                 <a
                   href="#donate"
                   className={`mt-5 inline-flex items-center gap-1 text-sm font-semibold transition-smooth group-hover:gap-2 ${
-                    isAccent ? "text-secondary" : "text-primary"
+                    isAccent
+                      ? "text-[#F4EEE8]"
+                      : "text-[#8B5E3C]"
                   }`}
                 >
                   Donate Now <span>→</span>
                 </a>
+
                 <HeartDoodle className="absolute -bottom-4 -right-4 h-24 w-24 opacity-10 transition-smooth group-hover:rotate-12 group-hover:opacity-20" />
               </motion.article>
             );

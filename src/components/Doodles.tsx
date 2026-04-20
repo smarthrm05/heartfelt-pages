@@ -49,3 +49,20 @@ export const HandDoodle = ({ className = "", style }: DoodleProps) => (
       stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
+
+// ✨ Doodle baru berdasarkan gambar: Tangan memegang Hati
+export const HandHeartDoodle = ({ className = "", style }: DoodleProps) => (
+  <svg viewBox="0 0 64 64" fill="none" className={className} style={style} xmlns="http://www.w3.org/2000/svg">
+    {/* Tangan */}
+    <path 
+      d="M12 44c-2-2-2-5 0-7s5-2 7 0l4 4M12 44c2 3 6 5 10 5h8c4 0 7-2 9-5l8-12c2-3 1-7-2-9s-7-1-9 2l-6 9" 
+      stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+    />
+    <path d="M23 37l-3 2M30 32l-2 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    {/* Hati */}
+    <path 
+      d="M32 28s-12-7-12-16c0-4 3-7 7-7 3 0 5 2 5 4 0-2 2-4 5-4 4 0 7 3 7 7 0 9-12 16-12 16z" 
+      stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+    />
+  </svg>
+);

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { HeartDoodle } from "./Doodles";
 
-// ✅ WhatsApp Icon (SVG asli)
 const WhatsAppIcon = ({ className = "h-4 w-4" }) => (
   <svg
     viewBox="0 0 32 32"
@@ -14,93 +13,135 @@ const WhatsAppIcon = ({ className = "h-4 w-4" }) => (
 );
 
 const cols = [
-  { title: "Our Work", links: ["Causes", "Projects", "Volunteers", "Events"] },
-  { title: "Our Story", links: ["About", "Careers", "Press", "Contact"] },
-  { title: "Partner with us", links: ["Corporate", "Internships", "Foundations", "Media"] },
+{
+title: "Our Work",
+links: ["Causes", "Projects", "Volunteers", "Events"]
+},
+
+{
+title: "Our Story",
+links: ["Uganda", "Gambia", "Gaza", "Khatam Al-Quran Mekkah"]
+}
 ];
 
 export const Footer = () => {
-  // ✅ WhatsApp Config
-  const message = "Assalamualaikum, I would like to know more about Inaayah SG";
 
-  const wa1 = `https://wa.me/6590620969?text=${encodeURIComponent(message)}`;
-  const wa2 = `https://wa.me/6592426981?text=${encodeURIComponent(message)}`;
+const message =
+"Assalamualaikum, I would like to know more about Inaayah SG";
 
-  return (
-    <motion.footer
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="bg-primary pt-20 pb-10 text-primary-foreground"
-    >
-      <div className="container">
-        <div className="grid gap-12 md:grid-cols-4">
-          <div>
-            <a href="#" className="mb-5 flex items-center gap-2">
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-secondary text-secondary-foreground">
-                <HeartDoodle className="h-5 w-5" />
-              </span>
-              <span className="font-display text-xl font-bold">Raha</span>
-            </a>
+const wa1 = `https://wa.me/6590620969?text=${encodeURIComponent(message)}`;
+const wa2 = `https://wa.me/6592426981?text=${encodeURIComponent(message)}`;
 
-            <p className="mb-6 text-sm text-primary-foreground/70">
-              Great brands connect with the support of small charities that create meaningful change in the communities they serve.
-            </p>
+return (
+<motion.footer
+initial={{ opacity:0 }}
+whileInView={{ opacity:1 }}
+viewport={{ once:true }}
+transition={{ duration:0.8 }}
+className="bg-[#F8F5F1] pt-20 pb-10 text-[#6B4A34]"
+>
+<div className="container">
+<div className="grid gap-12 md:grid-cols-4">
 
-            {/* ✅ WhatsApp Buttons */}
-            <div className="flex flex-col gap-3">
+<div>
+<a href="#" className="mb-5 flex items-center gap-2">
+<span className="grid h-9 w-9 place-items-center rounded-full bg-[#8B5E3C] text-white">
+<HeartDoodle className="h-5 w-5" />
+</span>
 
-              {/* WA 1 */}
-              <a
-                href={wa1}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-secondary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#25D366]"
-              >
-                <WhatsAppIcon className="h-4 w-4" />
-                +65 9062 0969
-              </a>
+<span className="font-display text-xl font-bold text-[#6B4A34]">
+INAAYAH SG
+</span>
+</a>
 
-              {/* WA 2 */}
-              <a
-                href={wa2}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-full border border-secondary px-5 py-2.5 text-sm font-semibold text-secondary transition-all duration-300 hover:scale-105 hover:bg-[#25D366] hover:text-white"
-              >
-                <WhatsAppIcon className="h-4 w-4" />
-                +65 9242 6981
-              </a>
+<p className="mb-6 text-sm text-[#6B4A34]/70">
+Great brands connect with the support of small charities that
+create meaningful change in the communities they serve.
+</p>
 
-            </div>
-          </div>
+<div className="flex flex-col gap-3">
 
-          {cols.map((c) => (
-            <div key={c.title}>
-              <h4 className="mb-4 font-display text-base font-semibold">{c.title}</h4>
-              <ul className="space-y-2.5 text-sm text-primary-foreground/70">
-                {c.links.map((l) => (
-                  <li key={l}>
-                    <a href="#" className="transition-colors hover:text-secondary">
-                      {l}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+<a
+href={wa1}
+target="_blank"
+rel="noopener noreferrer"
+className="flex items-center justify-center gap-2 rounded-full bg-[#8B5E3C] px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-[#25D366]"
+>
+<WhatsAppIcon className="h-4 w-4" />
++65 9062 0969
+</a>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-primary-foreground/10 pt-6 text-xs text-primary-foreground/60 sm:flex-row">
-          <p>© Copyright 2026 Inaayah SG. All rights reserved.</p>
-          <div className="flex gap-5">
-            <a href="#" className="hover:text-secondary">Privacy</a>
-            <a href="#" className="hover:text-secondary">Terms</a>
-            <a href="#" className="hover:text-secondary">Cookies</a>
-          </div>
-        </div>
-      </div>
-    </motion.footer>
-  );
+<a
+href={wa2}
+target="_blank"
+rel="noopener noreferrer"
+className="flex items-center justify-center gap-2 rounded-full border border-[#8B5E3C] px-5 py-2.5 text-sm font-semibold text-[#8B5E3C] transition-all duration-300 hover:scale-105 hover:bg-[#25D366] hover:text-white"
+>
+<WhatsAppIcon className="h-4 w-4" />
++65 9242 6981
+</a>
+
+</div>
+</div>
+
+{cols.map((c) => (
+<div key={c.title}>
+<h4 className="mb-4 font-display text-base font-semibold text-[#6B4A34]">
+{c.title}
+</h4>
+
+<ul className="space-y-2.5 text-sm text-[#6B4A34]/70">
+{c.links.map((l) => (
+<li key={l}>
+<a
+href="#"
+className="transition-colors hover:text-[#D9A07B]"
+>
+{l}
+</a>
+</li>
+))}
+</ul>
+
+</div>
+))}
+
+{/* Contact Column */}
+<div>
+<h4 className="mb-4 font-display text-base font-semibold text-[#6B4A34]">
+Contact
+</h4>
+
+<ul className="space-y-2.5 text-sm text-[#6B4A34]/70">
+<li>
+<a
+href="mailto:info@inaayahsg.com"
+className="hover:text-[#D9A07B]"
+>
+info@inaayahsg.com
+</a>
+</li>
+
+<li>
+Singapore
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-[#D9C7B8] pt-6 text-xs text-[#6B4A34]/60 sm:flex-row">
+<p>© Copyright 2026 Inaayah SG. All rights reserved.</p>
+
+<div className="flex gap-5">
+<a href="#" className="hover:text-[#D9A07B]">Privacy</a>
+<a href="#" className="hover:text-[#D9A07B]">Terms</a>
+<a href="#" className="hover:text-[#D9A07B]">Cookies</a>
+</div>
+
+</div>
+</div>
+</motion.footer>
+);
 };
