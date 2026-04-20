@@ -6,9 +6,11 @@ import { Campaigns } from "@/components/Campaigns";
 import { Impact } from "@/components/Impact";
 import { Testimonials } from "@/components/Testimonials";
 import { Projects } from "@/components/Projects";
+import { Gallery } from "@/components/Gallery";
 import { Newsletter } from "@/components/Newsletter";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -34,9 +36,11 @@ const Index = () => {
       <Impact />
       <Testimonials />
       <Projects />
+      <Gallery />
       <Newsletter />
       <FAQ />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   );
 };
