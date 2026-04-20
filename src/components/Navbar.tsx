@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { HeartDoodle } from "./Doodles";
+import logo from "@/assets/logo.png";
 
 export const Navbar = () => {
 
@@ -20,13 +20,17 @@ export const Navbar = () => {
       <div className="container flex items-center justify-between py-6">
 
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 text-primary-foreground">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-secondary text-secondary-foreground">
-            <HeartDoodle className="h-5 w-5" />
-          </span>
+        {/* Logo */}
+        <a href="#" className="flex items-center gap-3 text-primary-foreground">
+
+          <img
+            src={logo}
+            alt="Inaayah SG Logo"
+            className="h-12 w-auto object-contain"
+          />
 
           <span className="font-display text-xl font-bold">
-            Raha
+            INAAYAH SG
           </span>
         </a>
 

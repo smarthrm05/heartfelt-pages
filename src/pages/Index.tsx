@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Raha — Every Helping Hand, Every Heartfelt Change";
+    document.title = "INAAYAH SG";
   }, []);
 
   return (
