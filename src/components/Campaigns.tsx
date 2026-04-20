@@ -4,6 +4,7 @@ import campaign2 from "@/assets/campaign-2.jpg";
 import campaign3 from "@/assets/campaign-3.jpg";
 import { Counter } from "./Counter";
 import { ProgressBar } from "./ProgressBar";
+import { Eyebrow } from "./Eyebrow";
 
 const campaigns = [
   { img: campaign1, title: "Educate Underprivileged Children", desc: "Providing quality education to children in need.", raised: 75234, goal: 100000, progress: 75 },
@@ -24,7 +25,7 @@ export const Campaigns = () => {
           transition={{ duration: 0.7, ease }}
           className="mb-14 text-center"
         >
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">— Start Donations</p>
+          <Eyebrow label="Start Donations" align="center" className="mb-3" />
           <h2 className="mx-auto max-w-2xl font-display text-3xl font-bold leading-tight text-primary sm:text-4xl md:text-5xl">
             Transparent Donations: See How You Make a Difference
           </h2>

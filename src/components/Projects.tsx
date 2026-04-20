@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import campaign1 from "@/assets/campaign-1.jpg";
 import campaign2 from "@/assets/campaign-2.jpg";
 import campaign3 from "@/assets/campaign-3.jpg";
+import { Eyebrow } from "./Eyebrow";
 
 const projects = [
   { img: campaign1, title: "Mission to Educate Underprivileged Children", desc: "Providing quality education to children in need." },
@@ -22,7 +23,7 @@ export const Projects = () => {
           transition={{ duration: 0.7, ease }}
           className="mb-14 text-center"
         >
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">— Our Completed Projects</p>
+          <Eyebrow label="Our Completed Projects" align="center" className="mb-3" />
           <h2 className="mx-auto max-w-2xl font-display text-3xl font-bold leading-tight text-primary sm:text-4xl md:text-5xl">
             A Comprehensive Collection of Projects That Reflect Our Dedication
           </h2>

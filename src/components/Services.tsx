@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { HeartDoodle, LeafDoodle } from "./Doodles";
+import { Eyebrow } from "./Eyebrow";
 
 const services = [
   { title: "Quran Services", desc: "Distributing Holy Qurans and supporting recitation programs across communities.", icon: "📖" },
@@ -29,7 +30,7 @@ export const Services = () => {
           transition={{ duration: 0.7, ease }}
           className="mb-14 max-w-2xl"
         >
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">— Charity Services</p>
+          <Eyebrow label="Charity Services" className="mb-3" />
           <h2 className="font-display text-3xl font-bold leading-tight text-primary sm:text-4xl md:text-5xl">
             Compassionate Programs <br className="hidden md:block" />
             <span className="text-primary-glow">Built on Faith and Care</span>
