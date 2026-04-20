@@ -121,10 +121,10 @@ export const Footer = () => {
             <ul className="space-y-2.5 text-sm text-[#6B4A34]/70">
               <li>
                 <a
-                  href="mailto:info@inaayahsg.com"
+                  href="mailto:inaayahsg@gmail.com"
                   className="hover:text-[#D9A07B]"
                 >
-                  info@inaayahsg.com
+                  inaayahsg@gmail.com
                 </a>
               </li>
 

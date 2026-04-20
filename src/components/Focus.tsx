@@ -62,7 +62,7 @@ Faith & Community
 
 </h2>
 
-<p className="mx-auto mt-4 max-w-2xl text-sm text-[#6B4A34]/70">
+<p className="mx-auto mt-4 max-w-2xl text-sm text-[#6B4A34]/100">
 Rooted in faith and driven by compassion, our initiatives are dedicated to uplifting communities and creating lasting impact where it matters most.
 </p>
 
