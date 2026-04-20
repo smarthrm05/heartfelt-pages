@@ -15,7 +15,7 @@ const photos = [
   { src: g1, label: "Food Distribution", span: "md:col-span-2 md:row-span-2" },
   { src: g2, label: "Clean Water" },
   { src: g3, label: "Medical Care" },
-  { src: g4, label: "Eco Hope" },
+  { src: g4, label: "Eco Hope", span: "md:row-span-2" },
   { src: g5, label: "Education" },
   { src: g6, label: "Volunteers", span: "md:col-span-2" },
   { src: g7, label: "Elderly Support" },
@@ -47,7 +47,7 @@ export const Gallery = () => {
           </p>
         </motion.div>
 
-        <div className="grid auto-rows-[180px] grid-cols-2 gap-4 md:grid-cols-4 md:auto-rows-[200px]">
+        <div className="grid auto-rows-[280px] grid-cols-1 gap-5 sm:grid-cols-2 md:auto-rows-[340px] md:grid-cols-4 md:gap-6">
           {photos.map((p, i) => (
             <motion.figure
               key={p.label}
@@ -65,8 +65,8 @@ export const Gallery = () => {
                 loading="lazy"
                 className="h-full w-full object-cover transition-smooth duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/10 to-transparent opacity-0 transition-smooth group-hover:opacity-100" />
-              <figcaption className="absolute bottom-4 left-4 translate-y-2 text-sm font-semibold text-primary-foreground opacity-0 transition-smooth group-hover:translate-y-0 group-hover:opacity-100">
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent opacity-0 transition-smooth group-hover:opacity-100" />
+              <figcaption className="absolute bottom-5 left-5 translate-y-2 font-display text-lg font-semibold text-primary-foreground opacity-0 transition-smooth group-hover:translate-y-0 group-hover:opacity-100">
                 {p.label}
               </figcaption>
             </motion.figure>
